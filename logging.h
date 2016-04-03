@@ -6,8 +6,8 @@
 #define LOG_DETAIL      0x0200
 
 
-extern int DEBUG;
+extern int LOGGING;
 
-void log_level(int level, char *message, ...);
+void log_message(int level, char *message, ...);
 void log_function(char *message, ...);
 void log_error(char *message, ...);

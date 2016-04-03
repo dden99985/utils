@@ -1,11 +1,11 @@
 #include <logging.h>
 #include <stdarg.h>
 
-int DEBUG = 0;
+int LOGGING = 0;
 
-void log_level(int level, char *message, ...)
+void log_message(int level, char *message, ...)
 {
-  if(DEBUG & level)
+  if(LOGGING & level)
   {
     va_list vArgs;
     va_start(vArgs, message);
@@ -17,7 +17,7 @@ void log_level(int level, char *message, ...)
 
 void log_function(char *message, ...)
 {
-  if(DEBUG & LOG_FUNCTION)
+  if(LOGGING & LOG_FUNCTION)
   {
     va_list vArgs;
     va_start(vArgs, message);
@@ -29,7 +29,7 @@ void log_function(char *message, ...)
 
 void log_error(char *message, ...)
 {
-  if(DEBUG & LOG_ERROR)
+  if(LOGGING & LOG_ERROR)
   {
     va_list vArgs;
     va_start(vArgs, message);
